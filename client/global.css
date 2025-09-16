@@ -1,0 +1,119 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    /* BrightWay light theme: calm, inclusive, non-gendered */
+    --background: 210 20% 98%;
+    --foreground: 230 21% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 230 21% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 230 21% 12%;
+
+    /* Brand (vibrant orange) */
+    --primary: 24 95% 52%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Support (deep teal) */
+    --secondary: 188 80% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Neutral/muted */
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 16% 46%;
+
+    /* Accent (violet) */
+    --accent: 268 65% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Feedback */
+    --destructive: 0 84% 58%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 214 15% 90%;
+    --input: 214 15% 90%;
+    --ring: 24 95% 52%;
+
+    --radius: 0.75rem;
+
+    /* Sidebar tokens */
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 230 21% 20%;
+    --sidebar-primary: 191 90% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 16% 94%;
+    --sidebar-accent-foreground: 230 21% 20%;
+    --sidebar-border: 214 15% 90%;
+    --sidebar-ring: 191 90% 35%;
+
+    /* Logo gradient (light green) */
+    --logo-start: 150 65% 55%;
+    --logo-end: 168 70% 45%;
+  }
+
+  .dark {
+    --background: 230 20% 8%;
+    --foreground: 210 20% 98%;
+
+    --card: 230 20% 10%;
+    --card-foreground: 210 20% 98%;
+
+    --popover: 230 20% 10%;
+    --popover-foreground: 210 20% 98%;
+
+    --primary: 24 90% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 188 70% 42%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 14% 16%;
+    --muted-foreground: 214 16% 72%;
+
+    --accent: 268 70% 65%;
+    --accent-foreground: 230 40% 98%;
+
+    --destructive: 0 72% 46%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 230 14% 18%;
+    --input: 230 14% 18%;
+    --ring: 191 80% 45%;
+
+    --sidebar-background: 230 20% 8%;
+    --sidebar-foreground: 210 20% 96%;
+    --sidebar-primary: 191 80% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 230 16% 14%;
+    --sidebar-accent-foreground: 210 20% 96%;
+    --sidebar-border: 230 14% 18%;
+    --sidebar-ring: 191 80% 45%;
+
+    /* Logo gradient (dark mode) */
+    --logo-start: 150 70% 50%;
+    --logo-end: 168 75% 42%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+}
